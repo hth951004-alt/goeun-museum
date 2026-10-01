@@ -1,0 +1,12 @@
+---
+description: be is Sanity CMS, fe is the Next.js site
+alwaysApply: true
+---
+
+# Project layout
+
+- `be/` is the Sanity Studio backend. Schema, desk structure, and CMS config live only here.
+- `fe/` is the public Next.js frontend. Pages, UI, and GROQ queries live only here.
+- Do not put Studio code in `fe`, and do not put Next.js routes in `be`.
+- Sanity project ID is `752xh4f7`, organization ID is `odkqq351g`. Dataset defaults to `production`.
+- Keep the current vanilla HTML prototype at the repo root until the Next.js screens replace it.
