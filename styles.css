@@ -60,6 +60,7 @@
 :root {
   --line: 2px;
   --hair: 1px;
+  --hair-color: rgba(255, 255, 255, 0.5);
 }
 
 html {
@@ -91,7 +92,7 @@ a {
   padding: clamp(16px, 1.41vw, 27px) clamp(20px, 2.14vw, 41px)
     clamp(12px, 1.2vw, 20px) clamp(16px, 2.08vw, 40px);
   background: #090909;
-  border-bottom: var(--hair) solid #fff;
+  border-bottom: var(--hair) solid var(--hair-color);
   pointer-events: none;
 }
 
@@ -300,7 +301,7 @@ a {
 .featured {
   position: relative;
   padding-bottom: clamp(48px, 6.35vw, 122px);
-  border-top: var(--hair) solid #fff;
+  border-top: var(--hair) solid var(--hair-color);
 }
 
 .featured__eyebrow,
@@ -403,7 +404,7 @@ a {
 .exhibitions {
   min-height: clamp(48px, 5.68vw, 109px);
   padding: clamp(16px, 1.25vw, 24px) clamp(16px, 2.08vw, 40px) 0;
-  border-top: var(--hair) solid #fff;
+  border-top: var(--hair) solid var(--hair-color);
 }
 
 .browse {
@@ -492,7 +493,7 @@ a {
   padding: clamp(32px, 4.4vw, 85px) clamp(16px, 2.08vw, 40px)
     clamp(24px, 2.4vw, 49px);
   background: #090909;
-  border-top: var(--hair) solid #fff;
+  border-top: var(--hair) solid var(--hair-color);
 }
 
 .footer__identity {
@@ -531,7 +532,7 @@ a {
   flex-wrap: wrap;
   gap: 12px 50px;
   padding-top: 14px;
-  border-top: var(--hair) solid #fff;
+  border-top: var(--hair) solid var(--hair-color);
   font-size: clamp(14px, 1.05vw, 20px);
   font-weight: 300;
   letter-spacing: -0.01em;
@@ -559,7 +560,7 @@ a {
   width: min(290px, 100%);
   height: var(--hair);
   margin: clamp(16px, 1.56vw, 30px) 0 10px;
-  background: #fff;
+  background: var(--hair-color);
 }
 
 .exhibit__eyebrow {
@@ -627,7 +628,7 @@ a {
 .exhibit__credit {
   margin-top: clamp(24px, 1.6vw, 31px);
   padding-top: clamp(24px, 1.6vw, 31px);
-  border-top: var(--hair) solid #fff;
+  border-top: var(--hair) solid var(--hair-color);
   letter-spacing: -0.03em;
 }
 
@@ -673,7 +674,7 @@ a {
   gap: min(37px, 1.9271vw);
   margin: min(147px, 7.6563vw) calc(clamp(16px, 2.08vw, 40px) * -1) 0;
   padding: min(91px, 4.7396vw) clamp(16px, 2.08vw, 40px) 0;
-  border-top: var(--hair) solid #fff;
+  border-top: var(--hair) solid var(--hair-color);
 }
 
 .about__fact {

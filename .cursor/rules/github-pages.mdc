@@ -1,0 +1,13 @@
+---
+description: Always commit and push site changes to GitHub Pages
+alwaysApply: true
+---
+
+# GitHub Pages deploy
+
+After finishing site work, commit and push to `origin/main` without waiting to be asked. This repo is public and GitHub Pages serves `main` from `/`.
+
+- Remote: `https://github.com/hth951004-alt/goeun-museum.git`
+- Live site: https://hth951004-alt.github.io/goeun-museum/
+- Push with `git -c credential.helper='!gh auth git-credential' push origin main`
+- Do not change git config. If user.name/email are unset, pass them only for that commit.
