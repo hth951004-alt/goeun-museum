@@ -59,6 +59,7 @@
 
 :root {
   --line: 2px;
+  --hair: 1px;
 }
 
 html {
@@ -90,7 +91,7 @@ a {
   padding: clamp(16px, 1.41vw, 27px) clamp(20px, 2.14vw, 41px)
     clamp(12px, 1.2vw, 20px) clamp(16px, 2.08vw, 40px);
   background: #090909;
-  border-bottom: var(--line) solid #fff;
+  border-bottom: var(--hair) solid #fff;
   pointer-events: none;
 }
 
@@ -299,7 +300,7 @@ a {
 .featured {
   position: relative;
   padding-bottom: clamp(48px, 6.35vw, 122px);
-  border-top: var(--line) solid #fff;
+  border-top: var(--hair) solid #fff;
 }
 
 .featured__eyebrow,
@@ -402,7 +403,7 @@ a {
 .exhibitions {
   min-height: clamp(48px, 5.68vw, 109px);
   padding: clamp(16px, 1.25vw, 24px) clamp(16px, 2.08vw, 40px) 0;
-  border-top: var(--line) solid #fff;
+  border-top: var(--hair) solid #fff;
 }
 
 .browse {
@@ -491,7 +492,7 @@ a {
   padding: clamp(32px, 4.4vw, 85px) clamp(16px, 2.08vw, 40px)
     clamp(24px, 2.4vw, 49px);
   background: #090909;
-  border-top: var(--line) solid #fff;
+  border-top: var(--hair) solid #fff;
 }
 
 .footer__identity {
@@ -530,7 +531,7 @@ a {
   flex-wrap: wrap;
   gap: 12px 50px;
   padding-top: 14px;
-  border-top: var(--line) solid #fff;
+  border-top: var(--hair) solid #fff;
   font-size: clamp(14px, 1.05vw, 20px);
   font-weight: 300;
   letter-spacing: -0.01em;
@@ -556,7 +557,7 @@ a {
 .exhibit__rule {
   display: block;
   width: min(290px, 100%);
-  height: var(--line);
+  height: var(--hair);
   margin: clamp(16px, 1.56vw, 30px) 0 10px;
   background: #fff;
 }
@@ -626,12 +627,12 @@ a {
 .exhibit__credit {
   margin-top: clamp(24px, 1.6vw, 31px);
   padding-top: clamp(24px, 1.6vw, 31px);
-  border-top: var(--line) solid #fff;
+  border-top: var(--hair) solid #fff;
   letter-spacing: -0.03em;
 }
 
 .about {
-  padding: min(174px, 9.0625vw) min(195px, 10.1563vw) min(113px, 5.8854vw);
+  padding: min(174px, 9.0625vw) clamp(16px, 2.08vw, 40px) min(113px, 5.8854vw);
 }
 
 .about__title {
@@ -647,7 +648,6 @@ a {
   display: flex;
   align-items: stretch;
   gap: min(28px, 1.4583vw);
-  margin-left: min(5px, 0.2604vw);
   max-width: min(571px, 29.7396vw);
 }
 
@@ -671,9 +671,9 @@ a {
   display: flex;
   flex-direction: column;
   gap: min(37px, 1.9271vw);
-  margin: min(147px, 7.6563vw) calc(min(195px, 10.1563vw) * -1) 0;
-  padding: min(91px, 4.7396vw) min(200px, 10.4167vw) 0;
-  border-top: var(--line) solid #fff;
+  margin: min(147px, 7.6563vw) calc(clamp(16px, 2.08vw, 40px) * -1) 0;
+  padding: min(91px, 4.7396vw) clamp(16px, 2.08vw, 40px) 0;
+  border-top: var(--hair) solid #fff;
 }
 
 .about__fact {
@@ -769,7 +769,8 @@ a {
   }
 
   .about {
-    padding: 88px 20px 64px;
+    padding-top: 88px;
+    padding-bottom: 64px;
   }
 
   .about__title {
@@ -791,8 +792,8 @@ a {
   }
 
   .about__facts {
-    margin: 56px -20px 0;
-    padding: 40px 20px 0;
+    margin-top: 56px;
+    padding-top: 40px;
     gap: 24px;
   }
 
