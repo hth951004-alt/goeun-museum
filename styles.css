@@ -308,7 +308,7 @@ a {
 .browse__title {
   display: flex;
   align-items: flex-start;
-  gap: 8px;
+  gap: clamp(16px, 1.25vw, 24px);
   margin: 0;
   color: #fff;
   font-size: clamp(24px, 2.5vw, 48px);
@@ -355,7 +355,7 @@ a {
   font-size: clamp(32px, 3.93vw, 75.394px);
   font-weight: 300;
   letter-spacing: -0.03em;
-  line-height: 1.3;
+  line-height: 1.1;
 }
 
 .featured__title a {
@@ -576,8 +576,8 @@ a {
 
 .exhibit__chevron {
   display: block;
-  width: 26px;
-  height: 11px;
+  width: 0.72em;
+  height: 0.31em;
   flex-shrink: 0;
 }
 
@@ -608,7 +608,7 @@ a {
 
 .exhibit__essay-title {
   margin: 0;
-  font-size: clamp(32px, 7.3vw, 140px);
+  font-size: clamp(32px, 5.208vw, 100px);
   font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 110%;
@@ -729,6 +729,10 @@ a {
     white-space: normal;
   }
 
+  .exhibit {
+    padding-top: 96px;
+  }
+
   .exhibit__essay {
     grid-template-columns: 1fr;
     row-gap: 28px;
@@ -744,29 +748,6 @@ a {
 
   .footer__links {
     gap: 12px 24px;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .slat {
-    transform: none !important;
-  }
-
-  .brand,
-  .nav a {
-    transition: none;
-  }
-
-  .featured.is-card-follow .featured__card {
-    transition: none;
-  }
-
-  .browse__title {
-    transition: none;
-  }
-
-  .browse__track {
-    animation: none;
   }
 
   .about {
@@ -801,5 +782,28 @@ a {
   .about__fact {
     grid-template-columns: 64px 1fr;
     column-gap: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .slat {
+    transform: none !important;
+  }
+
+  .brand,
+  .nav a {
+    transition: none;
+  }
+
+  .featured.is-card-follow .featured__card {
+    transition: none;
+  }
+
+  .browse__title {
+    transition: none;
+  }
+
+  .browse__track {
+    animation: none;
   }
 }
