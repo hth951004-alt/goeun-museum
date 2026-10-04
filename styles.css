@@ -331,11 +331,16 @@ a {
   flex-shrink: 0;
 }
 
+.featured__eyebrow::after {
+  width: var(--hair);
+  background: var(--hair-color);
+}
+
 .featured__visual {
   display: block;
   width: min(1148px, calc(66.67% - 132px), calc(100% - 40px));
   margin-left: auto;
-  border: var(--line) solid #fff;
+  border: var(--hair) solid var(--hair-color);
 }
 
 .featured__photo {
@@ -348,9 +353,9 @@ a {
 
 .featured__title {
   width: min(827px, calc(100% - clamp(32px, 4.16vw, 80px)));
-  margin: calc(var(--line) * -1) clamp(16px, 2.08vw, 40px) 0;
+  margin: calc(var(--hair) * -1) clamp(16px, 2.08vw, 40px) 0;
   padding-top: clamp(8px, 0.625vw, 12px);
-  border-top: var(--line) solid #fff;
+  border-top: var(--hair) solid var(--hair-color);
   color: #fff;
   font-size: clamp(32px, 3.93vw, 75.394px);
   font-weight: 300;
@@ -368,7 +373,7 @@ a {
   min-height: 258px;
   padding: 35px 28px;
   background: #000;
-  border: var(--line) solid #fff;
+  border: var(--hair) solid var(--hair-color);
   color: #fff;
   font-size: clamp(16px, 1.72vw, 33px);
   font-weight: 400;
