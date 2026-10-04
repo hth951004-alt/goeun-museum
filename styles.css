@@ -540,7 +540,7 @@ a {
 }
 
 .exhibit {
-  padding-top: clamp(104px, 9.4vw, 180px);
+  padding-top: clamp(120px, 11.46vw, 220px);
 }
 
 .exhibit__intro {
@@ -599,7 +599,7 @@ a {
   display: block;
   width: 100%;
   height: auto;
-  margin-top: clamp(120px, 14.6vw, 280px);
+  margin-top: clamp(160px, 20.83vw, 400px);
   aspect-ratio: 1920 / 864;
   object-fit: cover;
 }
