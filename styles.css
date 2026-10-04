@@ -540,11 +540,16 @@ a {
 }
 
 .exhibit {
-  padding-top: clamp(140px, 17.6vw, 338px);
+  padding-top: clamp(96px, 8.33vw, 160px);
 }
 
 .exhibit__intro {
   padding: 0 clamp(16px, 2.08vw, 40px);
+}
+
+.exhibit__heading {
+  width: max-content;
+  max-width: 100%;
 }
 
 .exhibit__title,
@@ -558,7 +563,7 @@ a {
 
 .exhibit__rule {
   display: block;
-  width: min(290px, 100%);
+  width: 100%;
   height: var(--hair);
   margin: clamp(16px, 1.56vw, 30px) 0 10px;
   background: var(--hair-color);
@@ -567,6 +572,7 @@ a {
 .exhibit__eyebrow {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   gap: 11px;
   margin: 0;
   font-size: clamp(18px, 1.88vw, 36px);
@@ -720,10 +726,6 @@ a {
     opacity: 1 !important;
     visibility: visible !important;
     white-space: normal;
-  }
-
-  .exhibit {
-    padding-top: 96px;
   }
 
   .exhibit__essay {
