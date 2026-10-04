@@ -60,7 +60,7 @@
 :root {
   --line: 2px;
   --hair: var(--line);
-  --hair-color: rgba(255, 255, 255, 0.5);
+  --hair-color: #fff;
 }
 
 html {
