@@ -675,7 +675,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: min(37px, 1.9271vw);
-  margin: min(360px, 18.75vw) calc(clamp(16px, 2.08vw, 40px) * -1) 0;
+  margin: min(160px, 8.333vw) calc(clamp(16px, 2.08vw, 40px) * -1) 0;
   padding: min(91px, 4.7396vw) clamp(16px, 2.08vw, 40px) 0;
   border-top: var(--hair) solid var(--hair-color);
 }
