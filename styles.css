@@ -641,25 +641,24 @@ a {
 }
 
 .about__title {
-  margin: 0 0 min(91px, 4.7396vw);
-  font-size: min(118px, 6.1458vw);
+  margin: 0 0 min(39px, 2.0313vw);
+  font-size: min(100px, 5.2083vw);
   font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 1.1;
-  white-space: nowrap;
 }
 
 .about__letter {
   display: flex;
   align-items: stretch;
-  gap: min(28px, 1.4583vw);
-  max-width: min(571px, 29.7396vw);
+  gap: min(35px, 1.8229vw);
+  max-width: min(916px, 47.7083vw);
 }
 
 .about__rule {
-  width: var(--line);
+  width: var(--hair);
   flex-shrink: 0;
-  background: #fff;
+  background: var(--hair-color);
 }
 
 .about__body {
@@ -676,7 +675,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: min(37px, 1.9271vw);
-  margin: min(147px, 7.6563vw) calc(clamp(16px, 2.08vw, 40px) * -1) 0;
+  margin: min(553px, 28.8021vw) calc(clamp(16px, 2.08vw, 40px) * -1) 0;
   padding: min(91px, 4.7396vw) clamp(16px, 2.08vw, 40px) 0;
   border-top: var(--hair) solid var(--hair-color);
 }
@@ -684,7 +683,7 @@ a {
 .about__fact {
   display: grid;
   grid-template-columns: min(74px, 3.8542vw) auto;
-  column-gap: min(25px, 1.3021vw);
+  column-gap: min(81px, 4.2188vw);
   margin: 0;
 }
 
