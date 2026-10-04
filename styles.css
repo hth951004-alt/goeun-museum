@@ -547,9 +547,10 @@ a {
   padding: 0 clamp(16px, 2.08vw, 40px);
 }
 
-.exhibit__title {
+.exhibit__title,
+.exhibit__essay-title {
   margin: 0;
-  font-size: clamp(40px, 7.3vw, 140px);
+  font-size: clamp(32px, 5.208vw, 100px);
   font-weight: 300;
   letter-spacing: -0.03em;
   line-height: 110%;
@@ -604,14 +605,6 @@ a {
   align-items: start;
   margin-top: clamp(80px, 9.8vw, 188px);
   padding: 0 clamp(16px, 2.08vw, 40px) clamp(48px, 5.3vw, 101px);
-}
-
-.exhibit__essay-title {
-  margin: 0;
-  font-size: clamp(32px, 5.208vw, 100px);
-  font-weight: 300;
-  letter-spacing: -0.03em;
-  line-height: 110%;
 }
 
 .exhibit__essay-body {
