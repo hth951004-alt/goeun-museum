@@ -637,7 +637,7 @@ a {
 }
 
 .about {
-  padding: min(174px, 9.0625vw) clamp(16px, 2.08vw, 40px) min(113px, 5.8854vw);
+  padding: min(260px, 13.542vw) clamp(16px, 2.08vw, 40px) min(113px, 5.8854vw);
 }
 
 .about__title {
@@ -675,7 +675,7 @@ a {
   display: flex;
   flex-direction: column;
   gap: min(37px, 1.9271vw);
-  margin: min(553px, 28.8021vw) calc(clamp(16px, 2.08vw, 40px) * -1) 0;
+  margin: min(360px, 18.75vw) calc(clamp(16px, 2.08vw, 40px) * -1) 0;
   padding: min(91px, 4.7396vw) clamp(16px, 2.08vw, 40px) 0;
   border-top: var(--hair) solid var(--hair-color);
 }
@@ -750,7 +750,7 @@ a {
   }
 
   .about {
-    padding-top: 88px;
+    padding-top: 120px;
     padding-bottom: 64px;
   }
 
