@@ -84,21 +84,74 @@ if (reduceMotion) {
   });
   if (plate) plate.style.opacity = "1";
 } else {
+  const fineQuery = window.matchMedia("(pointer: fine)");
+  let finePointer = fineQuery.matches;
   const pointer = { raw: 0.5, x: 0.5 };
   let plateOpacity = 1;
   let last = performance.now();
+  let heroVisible = true;
+
+  const SWEEP_MIN = 0.16;
+  const SWEEP_MAX = 0.84;
+  const SWEEP_MS = 10000;
+  const PAUSE_MS = 1400;
+  const AUTO_CYCLE = (SWEEP_MS + PAUSE_MS) * 2;
+
+  function autoPointer(now) {
+    const t = now % AUTO_CYCLE;
+    if (t < SWEEP_MS) {
+      const ease = 0.5 - 0.5 * Math.cos((Math.PI * t) / SWEEP_MS);
+      return SWEEP_MIN + (SWEEP_MAX - SWEEP_MIN) * ease;
+    }
+    if (t < SWEEP_MS + PAUSE_MS) return SWEEP_MAX;
+    if (t < SWEEP_MS * 2 + PAUSE_MS) {
+      const u = (t - SWEEP_MS - PAUSE_MS) / SWEEP_MS;
+      const ease = 0.5 - 0.5 * Math.cos(Math.PI * u);
+      return SWEEP_MAX - (SWEEP_MAX - SWEEP_MIN) * ease;
+    }
+    return SWEEP_MIN;
+  }
 
   function onMove(event) {
+    if (!finePointer) return;
     const rect = blinds.getBoundingClientRect();
     pointer.raw = clamp((event.clientX - rect.left) / Math.max(1, rect.width), 0, 1);
   }
 
   window.addEventListener("pointermove", onMove, { passive: true });
   window.addEventListener("mousemove", onMove, { passive: true });
+  if (fineQuery.addEventListener) {
+    fineQuery.addEventListener("change", (event) => {
+      finePointer = event.matches;
+    });
+  } else if (fineQuery.addListener) {
+    fineQuery.addListener((event) => {
+      finePointer = event.matches;
+    });
+  }
+
+  const stage = document.querySelector(".stage");
+  if (stage && "IntersectionObserver" in window) {
+    const io = new IntersectionObserver(
+      ([entry]) => {
+        heroVisible = entry.isIntersecting;
+      },
+      { threshold: 0.12 }
+    );
+    io.observe(stage);
+  }
 
   function tick(now) {
+    if (!heroVisible) {
+      last = now;
+      requestAnimationFrame(tick);
+      return;
+    }
+
     const dt = clamp((now - last) / 1000, 0.001, 0.04);
     last = now;
+
+    if (!finePointer) pointer.raw = autoPointer(now);
 
     pointer.x += (pointer.raw - pointer.x) * (1 - Math.exp(-dt / 0.14));
     if (scene) {
